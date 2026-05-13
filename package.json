@@ -1,0 +1,22 @@
+{
+  "name": "dubs-buddy-codex-pet",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dubs Buddy, a UW-inspired custom pet for Codex Desktop.",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-pet.mjs",
+    "verify": "node scripts/verify-pet.mjs",
+    "status:pet": "node scripts/status-pet.mjs",
+    "install:pet": "node scripts/install-pet.mjs",
+    "package:zip": "node scripts/package-release.mjs",
+    "prepare:release": "npm run build && npm run verify && npm run package:zip"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "fflate": "^0.8.2",
+    "sharp": "^0.34.5"
+  }
+}

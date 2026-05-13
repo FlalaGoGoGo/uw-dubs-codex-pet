@@ -1,0 +1,18 @@
+node_modules/
+
+# Generated build output
+assets/processed/
+v3_1_motion_sources/
+dist/
+release/
+
+# Local document render output
+docs/rendered/
+
+# macOS / editor noise
+.DS_Store
+*.swp
+
+# Codex/local runtime noise
+.env
+.codex/
