@@ -11,7 +11,7 @@ const ROWS = 9;
 const SPRITESHEET_WIDTH = CELL_WIDTH * COLUMNS;
 const SPRITESHEET_HEIGHT = CELL_HEIGHT * ROWS;
 const PET_VERSION = "3.1.0";
-const MOTION_DIR_NAME = "v3_1_motion_sources";
+const MOTION_DIR_NAME = path.join("generated", "motion-sources");
 const DIST_PACKAGE_NAME = "dubs-buddy";
 const PET_ID = "dubs-buddy";
 const PET_DISPLAY_NAME = "Dubs Buddy";
@@ -222,7 +222,8 @@ const legacyMotionDirNames = [
   "v2_6_motion_sources",
   "v2_7_motion_sources",
   "v2_8_motion_sources",
-  "v3_0_motion_sources"
+  "v3_0_motion_sources",
+  "v3_1_motion_sources"
 ];
 const referenceSheetDir = path.join(ROOT, "references", "source-sheets");
 const distDir = path.join(ROOT, "dist", DIST_PACKAGE_NAME);

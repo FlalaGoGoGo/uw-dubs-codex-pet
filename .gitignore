@@ -2,7 +2,7 @@ node_modules/
 
 # Generated build output
 assets/processed/
-v3_1_motion_sources/
+generated/
 dist/
 release/
 

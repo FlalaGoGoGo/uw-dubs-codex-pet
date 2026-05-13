@@ -9,7 +9,7 @@ const PET_JSON = path.join(DIST_DIR, "pet.json");
 const SPRITESHEET = path.join(DIST_DIR, "spritesheet.png");
 const VERSION_FILE = path.join(DIST_DIR, "VERSION.txt");
 const BUILD_SCRIPT = path.join(ROOT, "scripts", "build-pet.mjs");
-const MOTION_DIR = path.join(ROOT, "v3_1_motion_sources");
+const MOTION_DIR = path.join(ROOT, "generated", "motion-sources");
 const PREVIEW_DIR = path.join(ROOT, "dist", "previews");
 const GALLERY = path.join(ROOT, "dist", "gallery.html");
 const TRANSITION_GALLERY = path.join(ROOT, "dist", "transition-gallery.html");
@@ -384,7 +384,7 @@ async function verifyMotionReferences() {
         assert(metadata.height === CELL_HEIGHT, `${file} height must be ${CELL_HEIGHT}.`);
         assert(metadata.hasAlpha === true, `${file} must include alpha.`);
       } catch (error) {
-        failures.push(`Cannot read V3.1 motion frame ${file}: ${error.message}`);
+        failures.push(`Cannot read generated motion frame ${file}: ${error.message}`);
       }
     }
   }

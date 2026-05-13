@@ -77,7 +77,7 @@ scripts/                  build, verify, install, status, and packaging scripts
 release/                  generated release zips after npm run package:zip
 ```
 
-Generated folders such as `dist/`, `release/`, `v3_1_motion_sources/`, and `docs/rendered/` are ignored by git.
+Generated folders such as `generated/`, `dist/`, `release/`, and `docs/rendered/` are ignored by git.
 
 ## Codex State Mapping
 

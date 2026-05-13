@@ -9,7 +9,7 @@ The public repo keeps only the current artwork inputs:
 
 Generated files are ignored by git:
 
-- `v3_1_motion_sources/`
+- `generated/`
 - `dist/`
 - `release/`
 - `assets/processed/`
