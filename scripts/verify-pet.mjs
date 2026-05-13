@@ -102,8 +102,10 @@ async function verifyNoDefaultLogoOverlay() {
     assert(!source.includes('scarfPolicy: "side-clean"'), "build script must not use the purple patch side-clean policy.");
     assert(!source.includes('src: "side-run"'), "build script must not use the old generated side-run SVG path.");
     assert(source.includes('src: "reference-sheet"'), "build script should use reference-sheet frames.");
-    assert(source.includes("v2_8_references"), "build script should keep the V2.8 fallback reference sheets.");
-    assert(source.includes("v3_1_references"), "build script should support V3.1 reference overrides.");
+    assert(
+      source.includes("references/source-sheets"),
+      "build script should load the curated reference sheets from references/source-sheets."
+    );
     assert(source.includes('scarfPolicy: "side-no-logo"'), "side-running rows should use no-logo scarf policy.");
     assert(source.includes('transitionSafe: true'), "build script should mark core rows transitionSafe.");
   } catch (error) {

@@ -10,7 +10,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs" / "Dubs_Buddy_Setup_Guide.docx"
-DUBS_IMAGE = ROOT / "Dubs.png"
+DUBS_IMAGE = ROOT / "references" / "style" / "Dubs.png"
 
 INK = RGBColor(17, 24, 39)
 MUTED = RGBColor(75, 85, 99)
@@ -91,7 +91,7 @@ def add_cover(doc):
         ("Version", "3.1.0"),
         ("Format", "Codex native custom pet"),
         ("Platforms", "macOS and Windows"),
-        ("Repo", "github.com/FlalaGoGoGo/dubs-buddy-codex-pet"),
+        ("Repo", "github.com/FlalaGoGoGo/uw-dubs-codex-pet"),
     ]
     for label, value in facts:
         p = left.add_paragraph()
@@ -127,7 +127,7 @@ def add_release_install(doc):
     numbered(
         doc,
         [
-            "Download dubs-buddy-codex-pet-v3.1.0.zip from the latest GitHub release.",
+            "Download uw-dubs-codex-pet-v3.1.0.zip from the latest GitHub release.",
             "Unzip it. The extracted folder should be named dubs-buddy.",
             "Copy the dubs-buddy folder into your Codex custom pets directory.",
         ],
@@ -155,7 +155,7 @@ def add_source_install(doc):
     p(doc, "Use this path if you want to inspect the build, regenerate previews, or contribute changes.")
     code(
         doc,
-        "git clone https://github.com/FlalaGoGoGo/dubs-buddy-codex-pet.git\ncd dubs-buddy-codex-pet\nnpm install\nnpm run build\nnpm run verify\nnpm run install:pet",
+        "git clone https://github.com/FlalaGoGoGo/uw-dubs-codex-pet.git\ncd uw-dubs-codex-pet\nnpm install\nnpm run build\nnpm run verify\nnpm run install:pet",
     )
     simple_table(
         doc,
@@ -229,8 +229,8 @@ def add_dev_notes(doc):
     bullets(
         doc,
         [
-            "Keep Dubs.png as the visual style reference.",
-            "Place new 4 x 2, eight-frame reference sheets in v3_1_references.",
+            "Keep references/style/Dubs.png as the visual style reference.",
+            "Place current 4 x 2, eight-frame reference sheets in references/source-sheets.",
             "Keep side-facing running rows no-logo to avoid reversed or doubled W marks.",
             "Run npm run prepare:release before publishing a GitHub release.",
             "Inspect dist/preview-contact-sheet.png, dist/gallery.html, dist/transition-gallery.html, and the demo WebP before publishing.",

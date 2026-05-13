@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest a new animation, polish idea, or documentation improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to improve?
+      description: Describe the animation, state, or docs change.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Reference material
+      description: Link or attach any visual references, prompts, or examples.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Constraints
+      description: Note anything important, such as style, scarf/W visibility, or Codex native pet limitations.

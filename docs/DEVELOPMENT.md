@@ -2,11 +2,10 @@
 
 ## Source Assets
 
-The current build is intentionally small:
+The public repo keeps only the current artwork inputs:
 
-- `Dubs.png`: original style reference
-- `v3_1_references/`: V3.1 4 x 2 reference sheets for the main personality states
-- `v2_8_references/`: side-running and jumping reference sheets still used by V3.1
+- `references/style/Dubs.png`: visual style anchor
+- `references/source-sheets/`: current 4 x 2, eight-frame animation sheets
 
 Generated files are ignored by git:
 
@@ -26,7 +25,7 @@ npm run verify
 
 `npm run build`:
 
-1. Reads the reference sheets.
+1. Reads the reference sheets from `references/source-sheets/`.
 2. Removes connected white/checkerboard backgrounds.
 3. Slices each 4 x 2 sheet into eight frames.
 4. Normalizes frame position, baseline, and transparency.
@@ -53,7 +52,7 @@ For new artwork, use an 8-frame 4 x 2 sheet:
 - Transparent background preferred
 - If the generator adds a checkerboard/white background, the build tries to remove it
 - Keep generous spacing between frames so neighboring elements do not enter the crop
-- Keep Dubs in the same visual style as `Dubs.png`
+- Keep Dubs in the same visual style as `references/style/Dubs.png`
 
 ## Release
 
@@ -70,5 +69,5 @@ This runs:
 The release zip is generated at:
 
 ```text
-release/dubs-buddy-codex-pet-v3.1.0.zip
+release/uw-dubs-codex-pet-v3.1.0.zip
 ```

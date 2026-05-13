@@ -4,7 +4,7 @@ Dubs Buddy is installed as a Codex native custom pet. You do not need Electron, 
 
 ## Option 1: Release Zip
 
-1. Download `dubs-buddy-codex-pet-v3.1.0.zip` from the [latest GitHub release](https://github.com/FlalaGoGoGo/dubs-buddy-codex-pet/releases/latest).
+1. Download `uw-dubs-codex-pet-v3.1.0.zip` from the [latest GitHub release](https://github.com/FlalaGoGoGo/uw-dubs-codex-pet/releases/latest).
 2. Unzip it.
 3. Copy the extracted `dubs-buddy` folder into the Codex custom pets directory.
 
@@ -26,8 +26,8 @@ Copy-Item -Recurse -Force ".\dubs-buddy" "$petDir\dubs-buddy"
 ## Option 2: Build From Source
 
 ```bash
-git clone https://github.com/FlalaGoGoGo/dubs-buddy-codex-pet.git
-cd dubs-buddy-codex-pet
+git clone https://github.com/FlalaGoGoGo/uw-dubs-codex-pet.git
+cd uw-dubs-codex-pet
 npm install
 npm run build
 npm run verify

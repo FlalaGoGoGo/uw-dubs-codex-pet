@@ -24,6 +24,7 @@ Codex Desktop currently loads custom pets from a fixed `8 x 9` spritesheet.
 ## Motion Principles
 
 - Every row has eight effective frames.
+- Current source sheets live in `references/source-sheets/`.
 - Front-facing rows keep the original scarf W from the artwork. The build does not add a second W overlay.
 - Side-facing rows do not show the W, which avoids mirrored or covered-logo artifacts.
 - Common loops are aligned to reduce visual jumps between Codex states.

@@ -30,7 +30,7 @@ const CORE_TRANSITIONS = [
 
 const REFERENCE_SHEETS = {
   idle: {
-    v3_1Rel: "v3_1_references/Idle.png",
+    rel: "references/source-sheets/idle.png",
     columns: 4,
     rows: 2,
     normalizeCenterX: 95,
@@ -38,7 +38,7 @@ const REFERENCE_SHEETS = {
     smartSlice: true
   },
   "running-right": {
-    rel: "v2_8_references/running-right.png",
+    rel: "references/source-sheets/running-right.png",
     columns: 4,
     rows: 2,
     normalizeBottomY: 189
@@ -51,7 +51,7 @@ const REFERENCE_SHEETS = {
     fallbackMirror: "running-right"
   },
   waving: {
-    v3_1Rel: "v3_1_references/Greeting : Waving.png",
+    rel: "references/source-sheets/waving.png",
     columns: 4,
     rows: 2,
     normalizeCenterX: 95,
@@ -59,13 +59,13 @@ const REFERENCE_SHEETS = {
     smartSlice: true
   },
   jumping: {
-    rel: "v2_8_references/jumping.png",
+    rel: "references/source-sheets/jumping.png",
     columns: 4,
     rows: 2,
     normalizeCenterX: 95
   },
   failed: {
-    v3_1Rel: "v3_1_references/Failed : Sad Crying.png",
+    rel: "references/source-sheets/failed-sad-crying.png",
     columns: 4,
     rows: 2,
     normalizeCenterX: 95,
@@ -73,7 +73,7 @@ const REFERENCE_SHEETS = {
     smartSlice: true
   },
   waiting: {
-    v3_1Rel: "v3_1_references/Waiting : Hourglass.png",
+    rel: "references/source-sheets/waiting-hourglass.png",
     columns: 4,
     rows: 2,
     normalizeCenterX: 95,
@@ -83,7 +83,7 @@ const REFERENCE_SHEETS = {
     smartSlice: true
   },
   running: {
-    v3_1Rel: "v3_1_references/Running : Working.png",
+    rel: "references/source-sheets/running-working.png",
     columns: 4,
     rows: 2,
     normalizeCenterX: 95,
@@ -91,7 +91,7 @@ const REFERENCE_SHEETS = {
     smartSlice: true
   },
   review: {
-    v3_1Rel: "v3_1_references/Review : Success Gift Box.png",
+    rel: "references/source-sheets/review-success-gift-box.png",
     columns: 4,
     rows: 2,
     normalizeCenterX: 95,
@@ -224,7 +224,7 @@ const legacyMotionDirNames = [
   "v2_8_motion_sources",
   "v3_0_motion_sources"
 ];
-const v3_1ReferenceDir = path.join(ROOT, "v3_1_references");
+const referenceSheetDir = path.join(ROOT, "references", "source-sheets");
 const distDir = path.join(ROOT, "dist", DIST_PACKAGE_NAME);
 const previewDir = path.join(ROOT, "dist", "previews");
 const transitionDir = path.join(ROOT, "dist", "transitions");
@@ -243,7 +243,7 @@ async function main() {
   await rm(transitionDir, { recursive: true, force: true });
   await rm(demoDir, { recursive: true, force: true });
   await mkdir(motionDir, { recursive: true });
-  await mkdir(v3_1ReferenceDir, { recursive: true });
+  await mkdir(referenceSheetDir, { recursive: true });
   await mkdir(distDir, { recursive: true });
   await mkdir(previewDir, { recursive: true });
   await mkdir(transitionDir, { recursive: true });
@@ -330,13 +330,13 @@ async function assertSourceImages() {
 }
 
 async function resolveReferenceSheetConfig(name, config) {
-  const candidates = [config.v3_1Rel, config.v3Rel, config.rel].filter(Boolean);
+  const candidates = [config.rel].filter(Boolean);
   for (const rel of candidates) {
     if (await exists(path.join(ROOT, rel))) {
       return {
         ...config,
         resolvedRel: rel,
-        sourceTier: rel === config.v3_1Rel ? "v3.1" : "fallback"
+        sourceTier: "reference"
       };
     }
   }
@@ -575,7 +575,7 @@ async function sliceReferenceSheet(name, config) {
   if (!resolved) {
     throw new Error(`No reference sheet available for "${name}".`);
   }
-  if (resolved.smartSlice && resolved.sourceTier === "v3.1") {
+  if (resolved.smartSlice) {
     return sliceReferenceSheetSmart(name, resolved);
   }
   const sheetPath = path.join(ROOT, resolved.resolvedRel);
@@ -1562,7 +1562,7 @@ async function buildReleasePreview() {
       </article>
       <article class="card gold">
         <h2>Release Package</h2>
-        <p>Run <code>npm run package:zip</code> to create <code>release/dubs-buddy-codex-pet-v${PET_VERSION}.zip</code> for GitHub Releases.</p>
+        <p>Run <code>npm run package:zip</code> to create <code>release/uw-dubs-codex-pet-v${PET_VERSION}.zip</code> for GitHub Releases.</p>
         <div class="stage"><img src="./demo/dubs-buddy-v${PET_VERSION}-demo.webp" alt="Dubs Buddy V3.1 demo animation" /></div>
       </article>
     </section>
@@ -1592,7 +1592,7 @@ function renderStateMappingMarkdown() {
 
 Codex Desktop currently renders custom pets from a fixed 8 x 9 spritesheet. Each cell is 192 x 208 px, and the complete image is 1536 x 1872 px.
 
-V3.1 uses user-generated reference sheets for idle, waving, failed, waiting, running, and review. Side-running and jumping use the dedicated V2.8 reference sheets. It does not add a second W logo; front-facing frames keep the source artwork's scarf mark, while side-running rows use no-logo side views so there is no reversed W or purple cover patch.
+V3.1 uses the curated reference sheets in \`references/source-sheets/\`. It does not add a second W logo; front-facing frames keep the source artwork's scarf mark, while side-running rows use no-logo side views so there is no reversed W or purple cover patch.
 
 | Row | Codex state | Motion family | Scarf policy | Transition-safe | V3.1 native frames | Role |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -20,7 +20,7 @@ dist/demo/dubs-buddy-v3.1.0-demo.webp
 3. Create a GitHub release using:
 
 ```text
-release/dubs-buddy-codex-pet-v3.1.0.zip
+release/uw-dubs-codex-pet-v3.1.0.zip
 ```
 
 Suggested release title:
@@ -44,7 +44,7 @@ Highlights:
 - installable release zip for macOS and Windows
 
 Install:
-1. Download `dubs-buddy-codex-pet-v3.1.0.zip`.
+1. Download `uw-dubs-codex-pet-v3.1.0.zip`.
 2. Unzip it.
 3. Copy `dubs-buddy` to your Codex custom pets folder.
 4. In Codex Desktop, go to `Appearance -> Pets -> Custom pets -> Refresh -> Dubs Buddy -> Wake Pet`.
@@ -59,7 +59,7 @@ It is a native Codex custom pet, so installation is simple: download the release
 
 The current version includes idle, side-running, waving, jumping, waiting, laptop-typing, sad failed, and gift-box success animations.
 
-Repo: https://github.com/FlalaGoGoGo/dubs-buddy-codex-pet
+Repo: https://github.com/FlalaGoGoGo/uw-dubs-codex-pet
 
 This is a non-commercial, unofficial fan project and is not affiliated with UW or OpenAI.
 

@@ -1,4 +1,9 @@
-# Dubs Buddy Codex Pet
+# UW Dubs Codex Pet
+
+![Version](https://img.shields.io/badge/version-3.1.0-4B2E83)
+![Codex Custom Pet](https://img.shields.io/badge/Codex-custom%20pet-111827)
+![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Windows-B7A57A)
+![Unofficial](https://img.shields.io/badge/status-unofficial%20fan%20project-lightgrey)
 
 An unofficial UW-inspired custom pet for Codex Desktop.
 
@@ -6,11 +11,12 @@ Dubs Buddy is a native Codex custom pet, not a standalone desktop app. It instal
 
 ![Dubs Buddy demo](docs/media/dubs-buddy-demo.webp)
 
-## Install From Release Zip
+## Quick Start
 
-1. Download `dubs-buddy-codex-pet-v3.1.0.zip` from the [latest release](https://github.com/FlalaGoGoGo/dubs-buddy-codex-pet/releases/latest).
+1. Download `uw-dubs-codex-pet-v3.1.0.zip` from the [latest release](https://github.com/FlalaGoGoGo/uw-dubs-codex-pet/releases/latest).
 2. Unzip it. You should see a folder named `dubs-buddy`.
-3. Copy that folder into your Codex custom pets directory.
+3. Copy `dubs-buddy` into your Codex custom pets directory.
+4. In Codex Desktop, open `Appearance -> Pets -> Custom pets -> Refresh -> Dubs Buddy -> Wake Pet`.
 
 macOS:
 
@@ -27,17 +33,19 @@ New-Item -ItemType Directory -Force $petDir | Out-Null
 Copy-Item -Recurse -Force ".\dubs-buddy" "$petDir\dubs-buddy"
 ```
 
-Then open Codex Desktop:
+## Features
 
-```text
-Appearance -> Pets -> Custom pets -> Refresh -> Dubs Buddy -> Wake Pet
-```
+- Native Codex custom pet package with no Electron, Tauri, or background app.
+- Nine Codex state rows, each with eight effective frames.
+- Idle, side-running, waving, jumping, waiting, working, failed, and review animations.
+- Transparent spritesheet build pipeline with frame alignment and motion QA.
+- Release zip for direct install, plus source build scripts for contributors.
 
 ## Build From Source
 
 ```bash
-git clone https://github.com/FlalaGoGoGo/dubs-buddy-codex-pet.git
-cd dubs-buddy-codex-pet
+git clone https://github.com/FlalaGoGoGo/uw-dubs-codex-pet.git
+cd uw-dubs-codex-pet
 npm install
 npm run build
 npm run verify
@@ -46,15 +54,6 @@ npm run install:pet
 
 After installing, refresh the custom pet list in Codex and select `Dubs Buddy`.
 
-## What Is Included
-
-- `dist/dubs-buddy/`: generated Codex pet package after `npm run build`
-- `release/dubs-buddy-codex-pet-v3.1.0.zip`: generated release zip after `npm run package:zip`
-- `v3_1_references/`: V3.1 reference sheets for idle, waving, failed, waiting, running, and review
-- `v2_8_references/`: side-running and jumping reference sheets still used by the current build
-- `scripts/`: build, verify, install, status, and packaging scripts
-- `docs/`: installation, state mapping, development, publishing, and Word setup guide materials
-
 ## Commands
 
 ```bash
@@ -62,9 +61,23 @@ npm run build           # generate dist/dubs-buddy and QA previews
 npm run verify          # validate manifest, spritesheet, frame drift, previews, and transparency
 npm run status:pet      # compare dist/dubs-buddy with the installed Codex pet
 npm run install:pet     # copy dist/dubs-buddy to ~/.codex/pets/dubs-buddy
-npm run package:zip     # create release/dubs-buddy-codex-pet-v3.1.0.zip
+npm run package:zip     # create release/uw-dubs-codex-pet-v3.1.0.zip
 npm run prepare:release # build, verify, and package
 ```
+
+## Repository Layout
+
+```text
+dist/dubs-buddy/          generated Codex pet package after npm run build
+docs/                     install, development, publishing, and Word guide materials
+docs/media/               README demo media
+references/style/         style anchor image
+references/source-sheets/ current 4 x 2 animation reference sheets
+scripts/                  build, verify, install, status, and packaging scripts
+release/                  generated release zips after npm run package:zip
+```
+
+Generated folders such as `dist/`, `release/`, `v3_1_motion_sources/`, and `docs/rendered/` are ignored by git.
 
 ## Codex State Mapping
 
@@ -82,6 +95,36 @@ npm run prepare:release # build, verify, and package
 
 More detail: [docs/STATE_MAPPING.md](docs/STATE_MAPPING.md)
 
+## Version History
+
+<details open>
+<summary><strong>v3.1.0</strong> - current public release</summary>
+
+- Adds the current personality motion pack: idle, waving, sad failed, hourglass waiting, laptop working, and gift-box review.
+- Keeps side-running left and right, plus jumping, as native Codex state rows.
+- Cleans the public repo structure so reference artwork lives under `references/` instead of version-specific folders.
+- Packages the pet as `uw-dubs-codex-pet-v3.1.0.zip`.
+- Includes install docs, a Word setup guide, QA previews, and publish notes.
+
+</details>
+
+<details>
+<summary><strong>v3.0.0</strong> - release polish milestone</summary>
+
+- Standardized the native Codex spritesheet build and verification flow.
+- Added stronger QA outputs, including preview galleries, transition previews, and demo WebP generation.
+- Removed the older rollback-oriented packaging flow so the repo could focus on the current public release.
+
+</details>
+
+<details>
+<summary><strong>v2.x</strong> - prototype motion exploration</summary>
+
+- Explored native Codex pet motion constraints, side-running, jumping, and core-state smoothing.
+- Earlier prototype assets are not kept in the public repo to avoid confusing new users.
+
+</details>
+
 ## Troubleshooting
 
 - If Dubs Buddy does not appear, confirm the folder is exactly `~/.codex/pets/dubs-buddy` on macOS or `%USERPROFILE%\.codex\pets\dubs-buddy` on Windows.
@@ -95,7 +138,12 @@ More detail: [docs/STATE_MAPPING.md](docs/STATE_MAPPING.md)
 - [State mapping](docs/STATE_MAPPING.md)
 - [Development notes](docs/DEVELOPMENT.md)
 - [Publishing notes](docs/PUBLISHING.md)
+- [Reference assets](references/README.md)
 - [Word setup guide](docs/Dubs_Buddy_Setup_Guide.docx)
+
+## Contributing
+
+Small improvements are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, especially if you are adding new reference artwork.
 
 ## Unofficial Fan Project
 
