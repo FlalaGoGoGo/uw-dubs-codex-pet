@@ -53,7 +53,7 @@ Install:
 ## LinkedIn Draft
 
 ```text
-I built Dubs Buddy, an unofficial UW-inspired custom pet for Codex Desktop.
+I built Dubs Buddy as a UW Foster master's student: a Codex Desktop custom pet that brings a small Dubs-style coding companion into Codex.
 
 It is a native Codex custom pet, so installation is simple: download the release zip, copy the `dubs-buddy` folder into Codex's custom pets directory, then enable it from Appearance -> Pets -> Custom pets.
 
@@ -61,7 +61,7 @@ The current version includes idle, side-running, waving, jumping, waiting, lapto
 
 Repo: https://github.com/FlalaGoGoGo/uw-dubs-codex-pet
 
-This is a non-commercial, unofficial fan project and is not affiliated with UW or OpenAI.
+Dubs Buddy was created as a non-commercial student project and is not affiliated with UW or OpenAI.
 
 Go Dawgs, and may your tests pass.
 ```

@@ -3,9 +3,9 @@
 ![Version](https://img.shields.io/badge/version-3.1.0-4B2E83)
 ![Codex Custom Pet](https://img.shields.io/badge/Codex-custom%20pet-111827)
 ![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Windows-B7A57A)
-![Unofficial](https://img.shields.io/badge/status-unofficial%20fan%20project-lightgrey)
+![Student Project](https://img.shields.io/badge/status-UW%20Foster%20student%20project-lightgrey)
 
-An unofficial UW-inspired custom pet for Codex Desktop.
+Created by a UW Foster master's student, Dubs Buddy is a Codex Desktop custom pet for anyone who wants a small Dubs-style coding companion in Codex.
 
 Dubs Buddy is a native Codex custom pet, not a standalone desktop app. It installs through `Appearance -> Pets -> Custom pets` and uses Codex's fixed spritesheet format: `8 x 9` frames, `192 x 208` pixels per frame, `1536 x 1872` pixels total.
 
@@ -145,9 +145,9 @@ More detail: [docs/STATE_MAPPING.md](docs/STATE_MAPPING.md)
 
 Small improvements are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request, especially if you are adding new reference artwork.
 
-## Unofficial Fan Project
+## Student Project And Trademark Note
 
-Dubs Buddy is a non-commercial, unofficial fan project. It is not affiliated with, endorsed by, or sponsored by the University of Washington or OpenAI.
+Dubs Buddy was created by a UW Foster master's student as a non-commercial Codex Desktop custom pet project. It is not affiliated with, endorsed by, or sponsored by the University of Washington or OpenAI.
 
 UW names, colors, logos, mascot references, and the Block W may involve University trademark rules. Review the official UW resources before broad distribution or any commercial use:
 

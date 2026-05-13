@@ -15,7 +15,7 @@ const MOTION_DIR_NAME = path.join("generated", "motion-sources");
 const DIST_PACKAGE_NAME = "dubs-buddy";
 const PET_ID = "dubs-buddy";
 const PET_DISPLAY_NAME = "Dubs Buddy";
-const PET_DESCRIPTION = "UW-inspired coding companion for Codex.";
+const PET_DESCRIPTION = "Created by a UW Foster master's student for Codex Desktop.";
 
 const TRANSPARENT = { r: 0, g: 0, b: 0, alpha: 0 };
 const CORE_TRANSITIONS = [
@@ -1620,7 +1620,7 @@ ${PET_DISPLAY_NAME} version: ${PET_VERSION}
 
 V3.1 personality motion pack refreshes idle, greeting, waiting, working, failed, and review while avoiding extra W overlays.
 
-This is an unofficial, non-commercial fan project. It is not affiliated with the University of Washington or OpenAI.
+Dubs Buddy was created by a UW Foster master's student as a non-commercial Codex Desktop custom pet project. It is not affiliated with the University of Washington or OpenAI.
 `;
 }
 

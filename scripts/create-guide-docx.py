@@ -66,7 +66,7 @@ def setup_document(doc):
     set_run(header.runs[0], size=9, color=MUTED, bold=True)
 
     footer = section.footer.paragraphs[0]
-    footer.text = "Unofficial fan project | v3.1.0"
+    footer.text = "UW Foster student project | v3.1.0"
     footer.alignment = WD_ALIGN_PARAGRAPH.RIGHT
     set_run(footer.runs[0], size=9, color=MUTED)
 
@@ -114,7 +114,7 @@ def add_intro(doc):
     h1(doc, "1. What This Is")
     p(
         doc,
-        "Dubs Buddy is an unofficial UW-inspired custom pet for Codex Desktop. It is not a separate desktop app; users install it through Codex's native Custom pets feature.",
+        "Created by a UW Foster master's student, Dubs Buddy is a Codex Desktop custom pet. It is not a separate desktop app; users install it through Codex's native Custom pets feature.",
     )
     callout(
         doc,
@@ -258,7 +258,7 @@ def add_sharing_notes(doc):
     h1(doc, "9. Sharing Notes")
     p(
         doc,
-        "This is a non-commercial, unofficial fan project. It is not affiliated with, sponsored by, or endorsed by the University of Washington or OpenAI.",
+        "Dubs Buddy was created by a UW Foster master's student as a non-commercial Codex Desktop custom pet project. It is not affiliated with, sponsored by, or endorsed by the University of Washington or OpenAI.",
     )
     bullets(
         doc,
@@ -270,7 +270,7 @@ def add_sharing_notes(doc):
     h2(doc, "LinkedIn Draft")
     callout(
         doc,
-        "I built Dubs Buddy, an unofficial UW-inspired custom pet for Codex Desktop. Download the release zip, copy the dubs-buddy folder into Codex's custom pets directory, then enable it from Appearance -> Pets -> Custom pets. Go Dawgs, and may your tests pass.",
+        "I built Dubs Buddy as a UW Foster master's student: a Codex Desktop custom pet that brings a small Dubs-style coding companion into Codex. Download the release zip, copy the dubs-buddy folder into Codex's custom pets directory, then enable it from Appearance -> Pets -> Custom pets. Go Dawgs, and may your tests pass.",
         fill="FFF8E1",
     )
 

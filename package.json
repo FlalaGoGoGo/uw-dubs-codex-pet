@@ -2,7 +2,7 @@
   "name": "uw-dubs-codex-pet",
   "version": "0.1.0",
   "private": true,
-  "description": "Dubs Buddy, a UW-inspired custom pet for Codex Desktop.",
+  "description": "Codex Desktop custom pet created by a UW Foster master's student.",
   "type": "module",
   "scripts": {
     "build": "node scripts/build-pet.mjs",
